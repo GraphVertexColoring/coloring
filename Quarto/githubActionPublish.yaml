@@ -1,0 +1,25 @@
+on:
+  workflow_dispatch: # Allows for manual triggering of action without a new push being made.
+  push: # Triggers on push
+    branches: main  
+
+name: Quarto Publish  # Defining the name.
+
+jobs: # List of jobs
+  build-deploy:
+    runs-on: ubuntu-latest
+    permissions: # Gives set of permissions to the action.
+      contents: write
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4 
+
+      - name: Set up Quarto
+        uses: quarto-dev/quarto-actions/setup@v2 # standard quarto setup action
+
+      - name: Render and Publish
+        uses: quarto-dev/quarto-actions/publish@v2 # Starndard quarto publish action.
+        with:
+          target: gh-pages # sets the target branch.
+          # should have a path to the quarto directory if its not the main one. 
+            # Should be the main one i believe as this should be a seperate repository.

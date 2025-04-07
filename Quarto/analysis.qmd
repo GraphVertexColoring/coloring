@@ -1,0 +1,12 @@
+---
+title: "Analysis listing"
+listing:
+    contents:
+        - "Analysis/*/*.qmd"
+    sort: 
+        - "date"
+        - "title desc"
+    type: table
+    date-format: medium
+---
+This page lists all the ISA's that are currently being stored on the page.

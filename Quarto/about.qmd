@@ -1,0 +1,23 @@
+---
+title: "About"
+
+about:
+    template: trestles
+    image: Shortestclosed.JPG
+    links:
+        - icon: github
+          text: Github
+          href: https://github.com/DenatYeti/GVC-validator/tree/main
+        - icon: twitter
+          text: twitter
+          href: https://google.com
+---
+## Education
+
+University of Southern Denmark, Odense | Odense, Fyn
+Masters in Computer Science | Sept 2020 - June 2025
+
+## Motivation
+
+This website aims to advance research and development about Graph-Vertex Coloring
+

@@ -1,0 +1,31 @@
+project:
+  type: website
+  render:
+    - about.qmd
+    - "Analysis/*/*.qmd"
+    - HowTo.qmd
+    - analysis.qmd
+    - index.qmd
+
+website:
+  title: "GraphVertexColoring"
+  sidebar:
+    style: "docked"
+    search: true
+    contents:
+      - href: index.qmd
+        text: Home
+      - HowTo.qmd
+      - analysis.qmd
+      - about.qmd
+      
+  
+format:
+  html:
+    theme:
+      - yeti
+      - brand
+    css: styles.css
+    toc: true
+
+
