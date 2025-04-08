@@ -1,7 +1,12 @@
 ---
 title: "Home"
 ---
+This website, is intended to be used as a tool for furthering research into  the Graph-Vertex Coloring problem.
+This page is currently maintained by Marco Chiarandini.
 
-This is a Quarto website.
+## Beta
+This site builds upon a beta website, which can be found at <https://denatyeti.github.io/GVC-validator/>
 
+## Developed in:
+The page has been developed using the Quarto framework.
 To learn more about Quarto websites visit <https://quarto.org/docs/websites>.

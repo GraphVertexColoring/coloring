@@ -21,3 +21,7 @@ Masters in Computer Science | Sept 2020 - June 2025
 
 This website aims to advance research and development about Graph-Vertex Coloring
 
+## Creation
+
+This website was developed as a part of my masters thesis in computer science, 
+where the aim was to dive further into both the development of a product, while expanding the available tools for reseraching the Graph-Vertex Coloring problem.

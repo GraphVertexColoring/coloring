@@ -2,9 +2,9 @@
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "quartoTest",
+    "title": "Home",
     "section": "",
-    "text": "This is a Quarto website.\nTo learn more about Quarto websites visit https://quarto.org/docs/websites.",
+    "text": "This website, is intended to be used as a tool for furthering research into the Graph-Vertex Coloring problem. This page is currently maintained by Marco Chiarandini.",
     "crumbs": [
       "Home"
     ]
@@ -118,6 +118,36 @@
     "text": "Adding additional Instances to better fill out the instance space.\nTo add more instance to the analysis, 1. Push additional instance into the instance folder found in the Resources subdirectory. 2. Run the solvers for the new instances. 3. Follow the Posting your own algorithms guide to add the new .sol files. 4. Rerun the ISA, by modifying the dir to a new name this allows for differences between the two spaces to also be viewed and analyzed.",
     "crumbs": [
       "Guide"
+    ]
+  },
+  {
+    "objectID": "about.html#creation",
+    "href": "about.html#creation",
+    "title": "About",
+    "section": "Creation",
+    "text": "Creation\nThis website was developed as a part of my masters thesis in computer science, where the aim was to dive further into both the development of a product, while expanding the available tools for reseraching the Graph-Vertex Coloring problem.",
+    "crumbs": [
+      "About"
+    ]
+  },
+  {
+    "objectID": "index.html#beta",
+    "href": "index.html#beta",
+    "title": "Home",
+    "section": "Beta",
+    "text": "Beta\nThis site builds upon a beta website, which can be found at https://denatyeti.github.io/GVC-validator/",
+    "crumbs": [
+      "Home"
+    ]
+  },
+  {
+    "objectID": "index.html#developed-in",
+    "href": "index.html#developed-in",
+    "title": "Home",
+    "section": "Developed in:",
+    "text": "Developed in:\nThe page has been developed using the Quarto framework. To learn more about Quarto websites visit https://quarto.org/docs/websites.",
+    "crumbs": [
+      "Home"
     ]
   }
 ]

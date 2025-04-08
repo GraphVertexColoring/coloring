@@ -4,7 +4,7 @@ title: "Guide"
 
 This page currently contains the old how to from the beta website.
 
-To see an example output from an execution of an Instance Space Analysis you can follow this link: [Example](./example/page.html)
+To see an example output from an execution of an Instance Space Analysis you can follow this link: [Example](./Analysis/Example/Example.html)
 To see the best known results: [best](./best/best_solutions.md)
 
 ## Initial information regarding the algorithms used
