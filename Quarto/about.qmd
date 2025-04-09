@@ -19,7 +19,7 @@ Masters in Computer Science | Sept 2020 - June 2025
 
 ## Motivation
 
-This website aims to advance research and development about Graph-Vertex Coloring
+This website aims to advance research and development about Graph-Vertex Coloring, by giving users a platform where they can post, compare
 
 ## Creation
 

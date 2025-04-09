@@ -95,7 +95,6 @@ def makefile(filepath, path):
 
     print(f"files: {filepath}/data.csv created")
 
-    # This should be modified to be placed in different sub directories later
     df = pd.read_csv(f"{filepath}/data.csv")
     df.head()
 

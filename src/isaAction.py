@@ -4,20 +4,42 @@ import yaml # used for the config.yaml file that will need to be updated to trig
 import json # for creating the options.json file 
 import metadataBuilder as builder
 import pageData as coordinate
+from ruamel.yaml import YAML
+from datetime import datetime
 
+def create_subdirs(dir_name, author):
+    os.makedirs(f"../Quarto/Analysis/{dir_name}")
+    print("Page directory created")
 
-def create_subdirs(dir_name):
-    os.makedirs(f"../analysis/{dir_name}")
-    print("Analysis directory created")
-    # create the option file based on a config
-    os.makedirs(f"../docs/{dir_name}")
-    print("Pages directory created")
-    #should make .qmd files instead.
-    with open(f"../docs/example/page.html", mode = 'rb') as src_file:
-        with open(f"../docs/{dir_name}/page.html", mode= "wb") as dest_file:
-            # TODO: SHOULD CHANGE THIS SUCH THAT THE TOP PARAMETERS ARE CHANGED.
-            # reading and writing chunks at a time
-            dest_file.write(src_file.read())
+    os.makedirs(f"../temp/{dir_name}")
+    print("Temp folder for analysis created")
+    
+    # Read the original file
+    with open(f"../Quarto/Analysis/Example/Example.qmd", 'r', encoding='utf-8') as file:
+        lines = file.readlines()
+
+    # Extract YAML front matter (between ---)
+    if lines[0].strip() == "---":
+        yaml_end = next(i for i, line in enumerate(lines[1:], 1) if line.strip() == "---")
+        yaml_lines = lines[1:yaml_end]
+        content_lines = lines[yaml_end+1:]
+    else:
+        raise ValueError("No YAML front matter found")
+
+    yaml = YAML()
+    yaml_data = yaml.load("".join(yaml_lines))
+
+    # Update values
+    yaml_data['title'] = dir_name
+    yaml_data['author'] = author
+    yaml_data['date'] = datetime.now().strftime("%B %d, %Y")
+
+    # Write new file
+    with open(f"../Quarto/Analysis/{dir_name}/page.qmd", 'w', encoding='utf-8') as file:
+        file.write("---\n")
+        yaml.dump(yaml_data, file)
+        file.write("---\n")
+        file.writelines(content_lines)
 
     print(f"Page.html copied to: ../docs/{dir_name}")
     return 0
@@ -27,13 +49,17 @@ def read_config():
         config = yaml.safe_load(file) # reads the file 
 
     algorithms = config.get('algos', []) # saving algos parsing to the databuilder
+
     
     config.pop('algos', None) # removing algos as its the only field not pertaining to the options file
     
     dir_name = config.get('dir')
     config.pop('dir', None )
 
-    create_subdirs(dir_name)
+    author = config.get('author')
+    config.pop('author', None )
+
+    create_subdirs(dir_name, author)
 
     with open(f'../analysis/{dir_name}/options.json', mode = 'w') as json_file:
         json.dump(config, json_file, indent=4)
@@ -44,11 +70,11 @@ def read_config():
 
 def main():
     algos, dir_name = read_config()
-    output_dir = os.path.abspath(f"../analysis/{dir_name}")
+    output_dir = os.path.abspath(f"../temp/{dir_name}")
     success = builder.make_file(algos, output_dir)
     if success:
-        os.system(f"isa -r ../analysis/{dir_name}")
-        coordinate.makefile(f"../docs/{dir_name}", f"../analysis/{dir_name}")
+        os.system(f"isa -r ../temp/{dir_name}")
+        coordinate.makefile(f"../Quarto/Analysis/{dir_name}", f"../temp/{dir_name}")
 
 if __name__ == "__main__":
     main()

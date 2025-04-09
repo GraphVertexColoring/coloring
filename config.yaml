@@ -1,0 +1,87 @@
+algos: # list of the algorithms to be used for ISA
+  - DSATUR
+  - RLF
+  - Greedy
+
+# A name to be used for the title of the subpage
+dir: test3
+# Name to be displayed as the author
+author: Fake
+
+##
+# All below metrics are used to perform Instance Space Analysis
+# Specifically these are used to create the options.json file
+# Which sets the parameters for the library PyIspace, which is run
+# using a CL call.
+##
+perf:
+  epsilon: 0.0125 # The performance threshold
+  MaxPerf: false # Whether we are working with a maximization or minimization problem.
+  AbsPerf: true # If we are using the absolute performance or the relative performance. 
+
+general:
+# A percentage threshold for how many algorithms need to have "good" 
+  # performance for an instance to be denoted as easy
+  betaThreshold: 0.55 
+
+# Chosing if the process should be run using parallel threads.
+parallel:
+  flag: false
+  ncores: 2 
+
+auto:
+  # denotes if preprocessing should be done, when working with the page this is needed.
+  preproc: true 
+  # this option is not properly implemented by pyispace.
+  featsel: false
+
+bound:
+  # Choses whether value bounding should be done on the features to eliminate extreme outliers.
+  flag: false  # setting this to false could help the issue with the reverse construction of a list of features.
+
+norm:
+  # Turning normalization on or off. if preproc is already false this does not matter.
+  flag: true  
+
+corr: 
+  flag: true
+  threshold: 10
+
+clust:
+  flag: true
+  KDEFAULT: 10
+  SILTHRESHOLD: 0.9
+  NTREES: 50
+  MaxIter: 1000
+  Replicates: 100
+
+pilot:
+  analytic: false
+  ntries: 5
+
+cloister:
+  pval: 0.05
+  cthres: 0.7
+
+pythia:
+  cvfolds: 5
+  ispolykrnl: true
+  useweights: false
+  uselibsvm: false
+
+trace:
+  usesim: false
+  PI: 0.55
+
+selvars:
+  smallscaleflag: false
+  smallscale: 0.5
+  fileidxflag: false
+  fileidx: ""
+  densityflag: false
+  mindistance: 0.1
+
+outputs:
+  csv: true
+  web: false
+  png: false
