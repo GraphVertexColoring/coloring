@@ -1,0 +1,1 @@
+Sitemap: https://GraphVertexColoring.github.io/coloring/sitemap.xml
