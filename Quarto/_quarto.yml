@@ -6,6 +6,7 @@ project:
     - HowTo.qmd
     - analysis.qmd
     - index.qmd
+    - best.qmd
 
 website:
   title: "GVC"
@@ -17,6 +18,7 @@ website:
         text: Home
       - HowTo.qmd
       - analysis.qmd
+      - best.qmd
       - about.qmd
       
   

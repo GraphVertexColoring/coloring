@@ -19,3 +19,8 @@ select {
 .toc-right {
     position: fixed
 }
+
+.dataTable {
+    max-width: 80%; /* Set max-width as a percentage or a fixed value like 800px */
+    overflow-x: auto; /* Enable horizontal scrolling */
+}

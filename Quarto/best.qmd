@@ -1,0 +1,23 @@
+---
+title: "Best Achieved Results"
+
+execute: 
+    echo: false
+format: html
+resources:
+    - style.css
+---
+
+```{r}
+library(DT)
+data <- read.csv("../best.csv")
+datatable(data, 
+    rownames = FALSE,
+    caption = "Best Achieved Results",
+    options = list(
+        dom = "t",
+        paging = FALSE,
+        pageLength = length(unique(data$instance))
+    )
+)
+```
