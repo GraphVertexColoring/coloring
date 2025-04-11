@@ -123,7 +123,7 @@
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "Home",
+    "title": "Graph-Vertex Coloring",
     "section": "",
     "text": "This website, is intended to be used as a tool for furthering research into the Graph-Vertex Coloring problem. This page is currently maintained by Marco Chiarandini.",
     "crumbs": [
@@ -133,7 +133,7 @@
   {
     "objectID": "index.html#beta",
     "href": "index.html#beta",
-    "title": "Home",
+    "title": "Graph-Vertex Coloring",
     "section": "Beta",
     "text": "Beta\nThis site builds upon a beta website, which can be found at https://denatyeti.github.io/GVC-validator/",
     "crumbs": [
@@ -143,7 +143,7 @@
   {
     "objectID": "index.html#developed-in",
     "href": "index.html#developed-in",
-    "title": "Home",
+    "title": "Graph-Vertex Coloring",
     "section": "Developed in:",
     "text": "Developed in:\nThe page has been developed using the Quarto framework. To learn more about Quarto websites visit https://quarto.org/docs/websites.",
     "crumbs": [
