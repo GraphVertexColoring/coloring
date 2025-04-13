@@ -1,5 +1,5 @@
 ---
-title: "Home"
+title: "GVC: Graph-Vertex Coloring"
 ---
 This website, is intended to be used as a tool for furthering research into  the Graph-Vertex Coloring problem.
 This page is currently maintained by Marco Chiarandini.

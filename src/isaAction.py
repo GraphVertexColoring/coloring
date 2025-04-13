@@ -41,7 +41,7 @@ def create_subdirs(dir_name, author):
         file.write("---\n")
         file.writelines(content_lines)
 
-    print(f"Page.html copied to: ../docs/{dir_name}")
+    print(f"page.qmd copied to: ../Quarto/Analysis/{dir_name}")
     return 0
 
 def read_config():

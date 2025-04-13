@@ -1,0 +1,44 @@
+name: Trigger Instance Space Analysis
+
+# Defines a trigger condition.
+on: 
+  push: # Only trigger when config.yaml in the main directory is changed.
+    paths: 
+        - "config.yaml"
+
+# Assigns the jobs that are to be triggered.
+jobs: 
+  triggerISA: # Name of the job.
+    runs-on: ubuntu-latest # Defines the base image to be used.
+    steps: 
+    # Downloads the code of the repository onto a virtual machine.
+    - name: Checkout repository 
+      uses: actions/checkout@v3 # checkout@v3 is an official action maintained by github.
+
+    # Sets up python as its needed to execute the scripts.
+    - name: Set up Python
+      uses: actions/setup-python@v4 # Uses standard action maintained by github.
+      with:
+        python-version: '3.9.13' # has to run older version due to pyispace.
+
+    # Ensure dependencies are downloaded.
+    - name: Install dependencies
+      run: |
+        pip install -r requirements.txt # Choses what to get based on the requirements.txt.
+        pip install pyispace
+
+    # Execute the python script which contains the bulk of what the action does.
+    - name: Execute Scripts #currently static but could be made more generic based on changes in the config
+      run: python isaAction.py
+      working-directory: src/
+
+    # Commits and pushes any changes that occured during the execution of this action.
+    - name: Commit and Push Changes
+      if: success() # Should only do this if the previous steps succeeded.
+      run: |
+        git config --global user.name 'github-actions'
+        git config --global user..email 'github-actions@github.com'
+        git add Quarto
+        git add analysis
+        git commit -m "Generated new Instance Space Analysis" || exit 0
+        git push
