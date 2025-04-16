@@ -18,6 +18,7 @@ jobs: # List of jobs
         uses: quarto-dev/quarto-actions/setup@v2 # standard quarto setup action
 
       - name: Render and Publish
-        uses: quarto-dev/quarto-actions/publish@v2 # Starndard quarto publish action.
+        uses: quarto-dev/quarto-actions/publish@v2 # Standard quarto publish action.
         with:
           target: gh-pages # sets the target branch.
+          path: Quarto
