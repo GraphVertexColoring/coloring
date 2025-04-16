@@ -1,0 +1,27 @@
+name: Cleanup Old Subdirectories
+
+# Sets up a trigger condition.
+on:
+  schedule: # Automatic trigger during a specified time and day.
+    - cron: '0 0 * * 0'  # Runs every Sunday at midnight UTC.
+
+# Assigns the jobs that are to be triggered.
+jobs:
+  cleanup: # Name of a job.
+    runs-on: ubuntu-latest # Sets up an image.
+
+    # Defines the steps of the job.
+    steps:
+      # Downloads the code of the repository onto a virtual machine.
+      - name: Checkout repository
+        uses: actions/checkout@v3 # checkout@v3 is an official action maintained by github.
+
+      # Sets up python as its needed to execute the scripts.
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with: # Additional configuration context 
+          python-version: '3.x'
+
+      # Execute the actual script, here deleting any repositories older than the specified amount.
+      - name: Delete old subdirectories
+        run: python .github/scripts/deleteOldDirs.py

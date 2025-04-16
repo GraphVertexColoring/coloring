@@ -21,5 +21,3 @@ jobs: # List of jobs
         uses: quarto-dev/quarto-actions/publish@v2 # Starndard quarto publish action.
         with:
           target: gh-pages # sets the target branch.
-          # should have a path to the quarto directory if its not the main one. 
-            # Should be the main one i believe as this should be a seperate repository.
