@@ -7,6 +7,7 @@ project:
     - analysis.qmd
     - index.qmd
     - best.qmd
+    - boxplot.qmd
 
 website:
   title: "GVC"
@@ -18,8 +19,10 @@ website:
         text: Home
       - HowTo.qmd
       - analysis.qmd
+      - boxplot.qmd
       - best.qmd
       - about.qmd
+
       
   
 format:

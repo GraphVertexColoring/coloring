@@ -3,7 +3,7 @@ title: "About"
 
 about:
     template: trestles
-    image: Shortestclosed.JPG
+    image: Images/Shortestclosed.JPG
     links:
         - icon: github
           text: Github

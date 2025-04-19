@@ -1,0 +1,124 @@
+---
+title: "BoxPlot Analysis"
+date:  April 19 2025
+author: "Frederik Dam"
+execute: 
+  echo: false
+format:
+  html:
+    css: styles.css
+    grid: 
+      sidebar-width: 200px
+    toc: false
+---
+
+## Data Inspection
+```{r}
+library(dplyr)
+library(tidyr)
+library(stringr)
+library(DT)
+library(ggplot2)
+
+
+# Read and clean
+data <- read.csv("../Resources/algoPerfMult.csv")
+data <- data[, colSums(!is.na(data)) > 0]
+data <- data[rowSums(!is.na(data)) > 0, ]
+
+datatable(data,
+    rownames = FALSE,
+    caption = "Algorithm performance measured in colors used",
+    options = list(
+        dom = "t",
+        paging = FALSE,
+        pageLength = length(unique(data$instance)) 
+    )
+)  %>%
+    formatRound(
+        columns = 2:10,
+        digits = 0,
+        interval = 3,
+        mark = ","
+    ) %>%
+    formatStyle(
+        columns = 2:10,
+        fontFamily = "monospace",
+        fontSize = "0.8rem"
+    )
+```
+
+## Boxplot
+Each currently used algorithm has had 2 runs, Algorithms with no valid solutions are ignored and removed completely from the ranking.
+```{r}
+
+# Pivot all run columns into long format
+long_data <- data %>%
+  select(-best, -best_performance) %>%
+  pivot_longer(
+    cols = -instance_name,
+    names_to = "algorithm_run",
+    values_to = "colors"
+  ) %>%
+  mutate(colors = as.numeric(colors))
+
+long_data <- long_data %>% # This removes faulty solutions as using only 1 color is not possible for any conventional graph.
+  filter(colors != 1)
+
+# Rank each algorithm run per instance
+ranked_data <- long_data %>%
+  group_by(instance_name) %>%
+  mutate(rank = rank(colors, ties.method = "min", na.last = "keep")) %>%
+  ungroup()
+
+# Optional: split algorithm name and run as separate columns
+ranked_data <- ranked_data %>%
+  mutate(
+    algorithm = str_remove(algorithm_run, "_Run[0-9]+"),
+    run = str_extract(algorithm_run, "Run[0-9]+")
+  )
+
+# Calculate median rank per algorithm
+algorithm_order <- ranked_data %>%
+  group_by(algorithm) %>%
+  summarise(median_rank = median(rank, na.rm = TRUE)) %>%
+  arrange(median_rank) %>%
+  pull(algorithm)
+
+# Re-factor algorithm column with the new ordering
+ranked_data <- ranked_data %>%
+  mutate(algorithm = factor(algorithm, levels = algorithm_order))
+
+# we prepare the colors
+library(RColorBrewer)
+colfun <- colorRampPalette(brewer.pal(12, "Paired"))
+myColors <- colfun(nlevels(ranked_data$algorithm)) # we keep out the entries from the previous year
+# myColors <- c(myColors,rep("#FFFFFF",9)) # white for the entries from the previous year
+names(myColors) <- levels(ranked_data$algorithm)
+
+require(ggplot2)
+# we start the plot saying defining the data and aestetics levels
+g <- ggplot(ranked_data, aes(x = reorder(algorithm, -rank, median), y = rank))
+# we define the geometrical object
+g <- g + geom_boxplot(aes(fill = algorithm),
+    width = 0.8, stat = "boxplot",
+    position = position_dodge(width = 0),
+    colour = I("#3366FF"), outlier.colour = I("#3366FF")
+)
+g <- g + guides(fill = FALSE) # remove the fill legend
+# we overimpose another geometrical object
+g <- g + geom_jitter(size = 1.2, position = position_jitter(height = 0, width = 0.4))
+
+# We can control the coordinates
+# g <- g + coord_cartesian(ylim=c(1,nlevels(ranked_data$alg)))
+# g <- g + scale_y_continuous(breaks=seq(1, nlevels(ranked_data$alg), 1))
+# g <- g + scale_y_continuous(limits=c(1,nlevels(DATA$alg)))
+# the color is also a coordinate se we specify colors:
+g <- g + scale_fill_manual(name = "algorithm", values = myColors)
+g <- g + coord_flip() # show the plot horizontally
+g <- g + labs(x = "algorithm")
+# we could change the theme
+print(g)
+
+
+```

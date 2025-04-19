@@ -10,7 +10,7 @@ resources:
 
 ```{r}
 library(DT)
-data <- read.csv("../best.csv")
+data <- read.csv("../Resources/best.csv")
 datatable(data, 
     rownames = FALSE,
     caption = "Best Achieved Results",
