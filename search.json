@@ -1,74 +1,63 @@
 [
   {
-    "objectID": "analysis.html",
-    "href": "analysis.html",
-    "title": "Analysis listing",
+    "objectID": "boxplot.html",
+    "href": "boxplot.html",
+    "title": "BoxPlot Analysis",
     "section": "",
-    "text": "This page lists all the ISA’s that are currently being stored on the page.\n\n\n\n\n\n\n   \n     \n     \n       Order By\n       Default\n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Title\n        \n         \n          Author\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\nDate\n\n\nTitle\n\n\nAuthor\n\n\n\n\n\n\nFeb 25, 2025\n\n\nAnalysis 2\n\n\nDenatYeti \n\n\n\n\nMar 25, 2025\n\n\nExample\n\n\nFrederik Dam\n\n\n\n\n\nNo matching items",
+    "text": "Vedhæfter pakke: 'dplyr'\n\n\nDe følgende objekter er maskerede fra 'package:stats':\n\n    filter, lag\n\n\nDe følgende objekter er maskerede fra 'package:base':\n\n    intersect, setdiff, setequal, union",
     "crumbs": [
-      "Analysis listing"
+      "BoxPlot Analysis"
     ]
   },
   {
-    "objectID": "Analysis/Example/Example.html",
-    "href": "Analysis/Example/Example.html",
-    "title": "Example",
+    "objectID": "boxplot.html#data-inspection",
+    "href": "boxplot.html#data-inspection",
+    "title": "BoxPlot Analysis",
     "section": "",
-    "text": "Color plot 1 by:\n    \n    \n  \n  \n  \n    Color plot 2 by:"
-  },
-  {
-    "objectID": "Analysis/Example/Example.html#features-explained",
-    "href": "Analysis/Example/Example.html#features-explained",
-    "title": "Example",
-    "section": "Features explained:",
-    "text": "Features explained:\nIsBetaEasy: Indicates whether an instance is denoted as easy based on the used Beta Threshold (default = 0.55) which denotes a percentage of instances that must have performance better than the performance threshold (0.0125 for the example), for an instance to be denoted as easy.\nNumGoodAlgos: The number of algorithms, used in the analysis, that attains good performance on the given instance.\nnum_vertices: The number of vertices that the instance contains.\nnum_edges: The number of edges that the instance contains.\nlargest_dist: The largest distance found among the shortest path between any two vertices of the graph.\nratio_of_edges: The ratio between the number of edges in a graph, and the maximum number of possible edges.\naverage_dist: This denotes the distance between any pair of vertices using their shortest path.\nmean_degree: The mean value of the number of connections a vertice has to other vertices in the graph.\nstd_deviation_degree: The standard deviation of the vertex degree.\nclustering_coef: The ratio of closed triplets to the number total number of triplets in a graph. calculated as Tripclosed / TripTotal.\nenergy: The mean value of all eigenvalues of the adjacency matrix.\nstd_devi_eig_adj: The standard deviation of the set of eigenvalues of the adjacency matrix.\nconnectivity: The Algebraic connectivity, which is denoted as the second smallest eigenvalue of the Laplacian matrix.\nsmall_nonzero_eig_lap:The smallest nonzero eigenvalue of the Laplacian matrix.\nsec_small_nonzero_eig_lap: The second smallest nonzero eigenvalue of the Laplacian matrix.\nlarge_eig_lap: The largest eigenvalue of the Laplacian matrix.\nsec_large_eig_lap: The second largest eigenvalue of the Laplacian matrix.\nsmall_eig_adj:The smallest eigenvalue of the adjacency matrix.\nsec_small_eig_adj: The second smallest eigenvalue of the adjacency matrix.\nlarge_eig_adj: The largest eigenvalue of the adjacency matrix.\nsec_large_eig_adj: The second largest eigenvalue of the adjacency matrix.\ngap_eig_adj:The gap between the largest and second largest eigenvalue of the adjacency matrix.\ngap_eig_lap:The gap between the largest and second largest eigenvalue of the Laplacian matrix.\n_perf: The performance metric for an algorithm on the instance, calculated as (Algperf - Bestperf) / Bestperf.\n_bin: The binary coloring, based on whether or not an algorithms performance metric is below the performance threshold or not.\nbest: The best is an “algorithm” only in name for the sake of the ISA, as the performance metric fro the analysis, is based on comparing to the best known solution, here best denotes those best known solutions."
-  },
-  {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About",
-    "section": "",
-    "text": "University of Southern Denmark, Odense | Odense, Fyn Masters in Computer Science | Sept 2020 - June 2025",
+    "text": "Vedhæfter pakke: 'dplyr'\n\n\nDe følgende objekter er maskerede fra 'package:stats':\n\n    filter, lag\n\n\nDe følgende objekter er maskerede fra 'package:base':\n\n    intersect, setdiff, setequal, union",
     "crumbs": [
-      "About"
+      "BoxPlot Analysis"
     ]
   },
   {
-    "objectID": "about.html#education",
-    "href": "about.html#education",
-    "title": "About",
+    "objectID": "boxplot.html#boxplot",
+    "href": "boxplot.html#boxplot",
+    "title": "BoxPlot Analysis",
+    "section": "Boxplot",
+    "text": "Boxplot\nEach currently used algorithm has had 2 runs, Algorithms with no valid solutions are ignored and removed completely from the ranking.\n\n\nWarning: The `&lt;scale&gt;` argument of `guides()` cannot be `FALSE`. Use \"none\" instead as\nof ggplot2 3.3.4.",
+    "crumbs": [
+      "BoxPlot Analysis"
+    ]
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "GVC: Graph-Vertex Coloring",
     "section": "",
-    "text": "University of Southern Denmark, Odense | Odense, Fyn Masters in Computer Science | Sept 2020 - June 2025",
+    "text": "This website, is intended to be used as a tool for furthering research into the Graph-Vertex Coloring problem. This page is currently maintained by Marco Chiarandini.",
     "crumbs": [
-      "About"
+      "Home"
     ]
   },
   {
-    "objectID": "about.html#motivation",
-    "href": "about.html#motivation",
-    "title": "About",
-    "section": "Motivation",
-    "text": "Motivation\nThis website aims to advance research and development about Graph-Vertex Coloring, by giving users a platform where they can post, compare",
+    "objectID": "index.html#beta",
+    "href": "index.html#beta",
+    "title": "GVC: Graph-Vertex Coloring",
+    "section": "Beta",
+    "text": "Beta\nThis site builds upon a beta website, which can be found at https://denatyeti.github.io/GVC-validator/",
     "crumbs": [
-      "About"
+      "Home"
     ]
   },
   {
-    "objectID": "about.html#creation",
-    "href": "about.html#creation",
-    "title": "About",
-    "section": "Creation",
-    "text": "Creation\nThis website was developed as a part of my masters thesis in computer science, where the aim was to dive further into both the development of a product, while expanding the available tools for reseraching the Graph-Vertex Coloring problem.",
+    "objectID": "index.html#developed-in",
+    "href": "index.html#developed-in",
+    "title": "GVC: Graph-Vertex Coloring",
+    "section": "Developed in:",
+    "text": "Developed in:\nThe page has been developed using the Quarto framework. To learn more about Quarto websites visit https://quarto.org/docs/websites.",
     "crumbs": [
-      "About"
+      "Home"
     ]
-  },
-  {
-    "objectID": "Analysis/Analysis2/analysis2.html",
-    "href": "Analysis/Analysis2/analysis2.html",
-    "title": "Analysis 2",
-    "section": "",
-    "text": "This is a page should contain an analysis."
   },
   {
     "objectID": "HowTo.html",
@@ -121,33 +110,74 @@
     ]
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Graph-Vertex Coloring",
+    "objectID": "Analysis/Analysis2/analysis2.html",
+    "href": "Analysis/Analysis2/analysis2.html",
+    "title": "Analysis 2",
     "section": "",
-    "text": "This website, is intended to be used as a tool for furthering research into the Graph-Vertex Coloring problem. This page is currently maintained by Marco Chiarandini.",
+    "text": "This is a page should contain an analysis."
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "University of Southern Denmark, Odense | Odense, Fyn Masters in Computer Science | Sept 2020 - June 2025",
     "crumbs": [
-      "Home"
+      "About"
     ]
   },
   {
-    "objectID": "index.html#beta",
-    "href": "index.html#beta",
-    "title": "Graph-Vertex Coloring",
-    "section": "Beta",
-    "text": "Beta\nThis site builds upon a beta website, which can be found at https://denatyeti.github.io/GVC-validator/",
+    "objectID": "about.html#education",
+    "href": "about.html#education",
+    "title": "About",
+    "section": "",
+    "text": "University of Southern Denmark, Odense | Odense, Fyn Masters in Computer Science | Sept 2020 - June 2025",
     "crumbs": [
-      "Home"
+      "About"
     ]
   },
   {
-    "objectID": "index.html#developed-in",
-    "href": "index.html#developed-in",
-    "title": "Graph-Vertex Coloring",
-    "section": "Developed in:",
-    "text": "Developed in:\nThe page has been developed using the Quarto framework. To learn more about Quarto websites visit https://quarto.org/docs/websites.",
+    "objectID": "about.html#motivation",
+    "href": "about.html#motivation",
+    "title": "About",
+    "section": "Motivation",
+    "text": "Motivation\nThis website aims to advance research and development about Graph-Vertex Coloring, by giving users a platform where they can post, compare",
     "crumbs": [
-      "Home"
+      "About"
+    ]
+  },
+  {
+    "objectID": "about.html#creation",
+    "href": "about.html#creation",
+    "title": "About",
+    "section": "Creation",
+    "text": "Creation\nThis website was developed as a part of my masters thesis in computer science, where the aim was to dive further into both the development of a product, while expanding the available tools for reseraching the Graph-Vertex Coloring problem.",
+    "crumbs": [
+      "About"
+    ]
+  },
+  {
+    "objectID": "Analysis/Example/Example.html",
+    "href": "Analysis/Example/Example.html",
+    "title": "Example",
+    "section": "",
+    "text": "Color plot 1 by:\n    \n    \n  \n  \n  \n    Color plot 2 by:"
+  },
+  {
+    "objectID": "Analysis/Example/Example.html#features-explained",
+    "href": "Analysis/Example/Example.html#features-explained",
+    "title": "Example",
+    "section": "Features explained:",
+    "text": "Features explained:\nIsBetaEasy: Indicates whether an instance is denoted as easy based on the used Beta Threshold (default = 0.55) which denotes a percentage of instances that must have performance better than the performance threshold (0.0125 for the example), for an instance to be denoted as easy.\nNumGoodAlgos: The number of algorithms, used in the analysis, that attains good performance on the given instance.\nnum_vertices: The number of vertices that the instance contains.\nnum_edges: The number of edges that the instance contains.\nlargest_dist: The largest distance found among the shortest path between any two vertices of the graph.\nratio_of_edges: The ratio between the number of edges in a graph, and the maximum number of possible edges.\naverage_dist: This denotes the distance between any pair of vertices using their shortest path.\nmean_degree: The mean value of the number of connections a vertice has to other vertices in the graph.\nstd_deviation_degree: The standard deviation of the vertex degree.\nclustering_coef: The ratio of closed triplets to the number total number of triplets in a graph. calculated as Tripclosed / TripTotal.\nenergy: The mean value of all eigenvalues of the adjacency matrix.\nstd_devi_eig_adj: The standard deviation of the set of eigenvalues of the adjacency matrix.\nconnectivity: The Algebraic connectivity, which is denoted as the second smallest eigenvalue of the Laplacian matrix.\nsmall_nonzero_eig_lap:The smallest nonzero eigenvalue of the Laplacian matrix.\nsec_small_nonzero_eig_lap: The second smallest nonzero eigenvalue of the Laplacian matrix.\nlarge_eig_lap: The largest eigenvalue of the Laplacian matrix.\nsec_large_eig_lap: The second largest eigenvalue of the Laplacian matrix.\nsmall_eig_adj:The smallest eigenvalue of the adjacency matrix.\nsec_small_eig_adj: The second smallest eigenvalue of the adjacency matrix.\nlarge_eig_adj: The largest eigenvalue of the adjacency matrix.\nsec_large_eig_adj: The second largest eigenvalue of the adjacency matrix.\ngap_eig_adj:The gap between the largest and second largest eigenvalue of the adjacency matrix.\ngap_eig_lap:The gap between the largest and second largest eigenvalue of the Laplacian matrix.\n_perf: The performance metric for an algorithm on the instance, calculated as (Algperf - Bestperf) / Bestperf.\n_bin: The binary coloring, based on whether or not an algorithms performance metric is below the performance threshold or not.\nbest: The best is an “algorithm” only in name for the sake of the ISA, as the performance metric fro the analysis, is based on comparing to the best known solution, here best denotes those best known solutions."
+  },
+  {
+    "objectID": "analysis.html",
+    "href": "analysis.html",
+    "title": "Analysis listing",
+    "section": "",
+    "text": "This page lists all the ISA’s that are currently being stored on the page.\n\n\n\n\n\n\n   \n     \n     \n       Order By\n       Default\n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Title\n        \n         \n          Author\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\nDate\n\n\nTitle\n\n\nAuthor\n\n\n\n\n\n\nFeb 25, 2025\n\n\nAnalysis 2\n\n\nDenatYeti \n\n\n\n\nMar 25, 2025\n\n\nExample\n\n\nFrederik Dam\n\n\n\n\n\nNo matching items",
+    "crumbs": [
+      "Analysis listing"
     ]
   }
 ]
