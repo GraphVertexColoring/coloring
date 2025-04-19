@@ -1,30 +1,10 @@
 [
   {
-    "objectID": "boxplot.html",
-    "href": "boxplot.html",
-    "title": "BoxPlot Analysis",
-    "section": "",
-    "text": "Vedhæfter pakke: 'dplyr'\n\n\nDe følgende objekter er maskerede fra 'package:stats':\n\n    filter, lag\n\n\nDe følgende objekter er maskerede fra 'package:base':\n\n    intersect, setdiff, setequal, union",
-    "crumbs": [
-      "BoxPlot Analysis"
-    ]
-  },
-  {
-    "objectID": "boxplot.html#data-inspection",
-    "href": "boxplot.html#data-inspection",
-    "title": "BoxPlot Analysis",
-    "section": "",
-    "text": "Vedhæfter pakke: 'dplyr'\n\n\nDe følgende objekter er maskerede fra 'package:stats':\n\n    filter, lag\n\n\nDe følgende objekter er maskerede fra 'package:base':\n\n    intersect, setdiff, setequal, union",
-    "crumbs": [
-      "BoxPlot Analysis"
-    ]
-  },
-  {
     "objectID": "boxplot.html#boxplot",
     "href": "boxplot.html#boxplot",
     "title": "BoxPlot Analysis",
     "section": "Boxplot",
-    "text": "Boxplot\nEach currently used algorithm has had 2 runs, Algorithms with no valid solutions are ignored and removed completely from the ranking.\n\n\nWarning: The `&lt;scale&gt;` argument of `guides()` cannot be `FALSE`. Use \"none\" instead as\nof ggplot2 3.3.4.",
+    "text": "Boxplot\nEach currently used algorithm has had 2 runs, Algorithms with no valid solutions are ignored and removed completely from the ranking.",
     "crumbs": [
       "BoxPlot Analysis"
     ]
