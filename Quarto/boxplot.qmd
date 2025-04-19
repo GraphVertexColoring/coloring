@@ -14,7 +14,7 @@ format:
 
 ## Data Inspection
 ```{r}
-library(dplyr)
+suppressPackageStartupMessages(library(dplyr)) # suppresses the startup message to avoid it being shown on the page.
 library(tidyr)
 library(stringr)
 library(DT)
@@ -105,7 +105,7 @@ g <- g + geom_boxplot(aes(fill = algorithm),
     position = position_dodge(width = 0),
     colour = I("#3366FF"), outlier.colour = I("#3366FF")
 )
-g <- g + guides(fill = FALSE) # remove the fill legend
+g <- g + guides(fill = "none") # remove the fill legend
 # we overimpose another geometrical object
 g <- g + geom_jitter(size = 1.2, position = position_jitter(height = 0, width = 0.4))
 
