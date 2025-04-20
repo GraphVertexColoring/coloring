@@ -16,7 +16,7 @@ This process is done by,
 1. Running your algorithm using the instances present in the Resources folder for the repository.
 2. Gathering the resulting .sol files in a directory called the name that the algorithm should be recognized as, ensuring no overlap with pre existing algorithms in the repository.
 
-This triggers a simple coloring-verifier that ensure that only valid solutions are present on the repository, in the case that an algorithm shows a better performance than previously denoted in the [best_solutions.md](./best_solutions.md) file, said file is updated to reflect this. 
+This triggers a simple coloring-verifier that ensure that only valid solutions are present on the repository, in the case that an algorithm shows a better performance than previously denoted in the [best_solutions.md](../best_solutions.md) file, said file is updated to reflect this. 
 
 ## Running your own Instance Space Analysis
 To perform an Instance Space Analysis (ISA),
