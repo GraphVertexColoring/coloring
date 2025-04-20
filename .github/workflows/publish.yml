@@ -14,8 +14,22 @@ jobs: # List of jobs
       - name: Check out repository
         uses: actions/checkout@v4 
 
+      - name: Set up R
+        uses: r-lib/actions/setup-r@v2
+
       - name: Set up Quarto
         uses: quarto-dev/quarto-actions/setup@v2 # standard quarto setup action
+
+      - name: Install R Packages
+        run: |
+          Rscript -e 'install.packages(c(
+            "dplyr", 
+            "tidyr", 
+            "stringr", 
+            "DT", 
+            "ggplot2", 
+            "RColorBrewer"
+          ), repos = "https://cloud.r-project.org")'
 
       - name: Render and Publish
         uses: quarto-dev/quarto-actions/publish@v2 # Standard quarto publish action.
