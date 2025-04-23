@@ -1,7 +1,8 @@
-on:
+.on:
   workflow_dispatch: # Allows for manual triggering of action without a new push being made.
   push: # Triggers on push
     branches: main  
+  workflow_call:
 
 name: Quarto Publish  # Defining the name.
 

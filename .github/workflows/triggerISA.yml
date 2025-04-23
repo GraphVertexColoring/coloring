@@ -39,6 +39,9 @@ jobs:
         git config --global user.name 'github-actions'
         git config --global user..email 'github-actions@github.com'
         git add Quarto
-        git add analysis
         git commit -m "Generated new Instance Space Analysis" || exit 0
         git push
+    
+    # Reuses the Quarto Publish workflow such that automatic publishing is performed when a new ISA is made 
+    - name: Publish 
+      uses: GraphVertexColoring/coloring/.github/workflows/publish.yml
