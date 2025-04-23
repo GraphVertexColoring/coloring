@@ -45,3 +45,5 @@ jobs:
     # Reuses the Quarto Publish workflow such that automatic publishing is performed when a new ISA is made 
     - name: Publish 
       uses: GraphVertexColoring/coloring/.github/workflows/publish.yml@master
+      secrets:
+        token: ${{ secrets.ORG_PAT}}
