@@ -37,7 +37,7 @@ jobs:
       if: success() # Should only do this if the previous steps succeeded.
       run: |
         git config --global user.name 'github-actions'
-        git config --global user..email 'github-actions@github.com'
+        git config --global user.email 'github-actions@github.com'
         git add Quarto
         git commit -m "Generated new Instance Space Analysis" || exit 0
         git push
