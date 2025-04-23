@@ -42,8 +42,9 @@ jobs:
         git commit -m "Generated new Instance Space Analysis" || exit 0
         git push
     
-    # Reuses the Quarto Publish workflow such that automatic publishing is performed when a new ISA is made 
-    - name: Publish 
-      uses: GraphVertexColoring/coloring/.github/workflows/publish.yml@master
-      secrets:
-        token: ${{ secrets.ORG_PAT}}
+  # Reuses the Quarto Publish workflow such that automatic publishing is performed when a new ISA is made 
+  publish:
+    needs: triggerISA  # run after triggerISA finishes
+    uses: GraphVertexColoring/coloring/.github/workflows/publish.yml@master
+    secrets:
+      token: ${{ secrets.ORG_PAT }}
