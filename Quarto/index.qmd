@@ -1,12 +1,23 @@
 ---
 title: "GVC: Graph-Vertex Coloring"
 ---
-This website, is intended to be used as a tool for furthering research into  the Graph-Vertex Coloring problem.
-This page is currently maintained by Marco Chiarandini.
+**GVC** is a hub meant to facilitate and encourage developments regarding the **G**raph-**V**ertex **C**oloring problem.
+To accomplish this, it provides the following functionalities:
+
+- An Instance Space Analysis tool
+    - Feature gathering from instances
+    - Performance measures from a set of predefined algorithms
+    - The ability to upload user algorithms to compare
+- A package to extract the features locally.
+- A rank Based analysis page, which encorporates all algorithms available to the page.
+
+These features are all available through the pages associated Github organisation <https://github.com/GraphVertexColoring/>
+
+For an explanation on how to use the different aspects see [Getting Started](HowTo.qmd)
 
 ## Beta
-This site builds upon a beta website, which can be found at <https://denatyeti.github.io/GVC-validator/>
+An Initial beta version of this site can be found at <https://denatyeti.github.io/GVC-validator/>. This initial version contains only some of the functionalities and is no longer maintained.
 
-## Developed in:
-The page has been developed using the Quarto framework.
-To learn more about Quarto websites visit <https://quarto.org/docs/websites>.
+## Inspiration:
+This structure of this site, has taken great inspiration from the COCO page, which can be found at <https://coco-platform.org/>. 
+
