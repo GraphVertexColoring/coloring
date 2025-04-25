@@ -14,7 +14,7 @@ about:
 ---
 ## Education
 
-University of Southern Denmark, Odense | Odense, Fyn
+University of Southern Denmark, Odense | Odense, Fyn |
 Masters in Computer Science | Sept 2020 - June 2025
 
 ## Motivation

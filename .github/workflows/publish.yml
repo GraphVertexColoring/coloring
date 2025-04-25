@@ -9,6 +9,7 @@ jobs: # List of jobs
     runs-on: ubuntu-latest
     permissions: # Gives set of permissions to the action.
       contents: write
+      pages: write
     steps:
       - name: Check out repository
         uses: actions/checkout@v4 
