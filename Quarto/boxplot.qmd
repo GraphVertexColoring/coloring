@@ -25,7 +25,9 @@ library(ggplot2)
 data <- read.csv("../Resources/algoPerfMult.csv")
 data <- data[, colSums(!is.na(data)) > 0]
 data <- data[rowSums(!is.na(data)) > 0, ]
+data <- data[, !(apply(data, 2, function(col) all(col[!is.na(col)] == 1)))]
 
+# should clean the bad ones here too
 datatable(data,
     rownames = FALSE,
     caption = "Algorithm performance measured in colors used",
