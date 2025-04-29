@@ -30,11 +30,11 @@ le450_25b.col,450,450,nan
 queen10_10gb.col,100,100,nan
 R100_1gb.col,100,100,nan
 wap01a.col,2368,2368,nan
-1-FullIns_3.col,30,4,4
+1-FullIns_3.col,4,4,4
 R50_5gb.col,50,50,nan
 4-Insertions_3.col,79,79,nan
 R50_5g.col,50,50,nan
-1-FullIns_5.col,282,6,6
+1-FullIns_5.col,6,6,6
 queen12_12g.col,144,144,nan
 DSJR500.1c.col,500,500,nan
 wap08a.col,1870,1870,nan
@@ -47,7 +47,7 @@ homer.col,561,561,nan
 R75_1g.col,70,70,nan
 anna.col,138,138,nan
 le450_15d.col,450,450,nan
-1-FullIns_4.col,93,5,5
+1-FullIns_4.col,5,5,5
 DSJC1000.5.col,1000,1000,nan
 DSJC250.9.col,250,250,nan
 DSJC125.5gb.col,125,125,nan
@@ -110,7 +110,7 @@ C57-N00778-B50-WAP__9.col,778,778,nan
 mulsol.i.1.col,197,197,nan
 mulsol.i.4.col,185,185,nan
 will199GPIA.col,701,701,nan
-2-Insertions_3.col,37,37,nan
+2-Insertions_3.col,37,4,4
 DSJC1000.1.col,1000,1000,nan
 wap02a.col,2464,2464,nan
 fpsol2.i.2.col,451,451,nan
