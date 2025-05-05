@@ -20,7 +20,6 @@ library(stringr)
 library(DT)
 library(ggplot2)
 
-
 # Read and clean
 data <- read.csv("../Resources/algoPerfMult.csv")
 data <- data[, colSums(!is.na(data)) > 0]
@@ -53,6 +52,8 @@ datatable(data,
 ## Boxplot
 Each currently used algorithm has had 2 runs, Algorithms with no valid solutions are ignored and removed completely from the ranking.
 ```{r}
+# Loading the best.csv
+best_data <- read.csv("../Resources/best.csv")
 
 # Pivot all run columns into long format
 long_data <- data %>%
@@ -91,6 +92,10 @@ algorithm_order <- ranked_data %>%
 ranked_data <- ranked_data %>%
   mutate(algorithm = factor(algorithm, levels = algorithm_order))
 
+# Merge category info into ranked_data 
+colnames(best_data)[colnames(best_data) == "Instance"] <- "instance_name"
+ranked_data <- merge(ranked_data, best_data[, c("instance_name", "Category")], by = "instance_name", all.x = TRUE)
+
 # we prepare the colors
 library(RColorBrewer)
 colfun <- colorRampPalette(brewer.pal(12, "Paired"))
@@ -101,6 +106,7 @@ names(myColors) <- levels(ranked_data$algorithm)
 require(ggplot2)
 # we start the plot saying defining the data and aestetics levels
 g <- ggplot(ranked_data, aes(x = reorder(algorithm, -rank, median), y = rank))
+
 # we define the geometrical object
 g <- g + geom_boxplot(aes(fill = algorithm),
     width = 0.8, stat = "boxplot",
@@ -108,8 +114,10 @@ g <- g + geom_boxplot(aes(fill = algorithm),
     colour = I("#3366FF"), outlier.colour = I("#3366FF")
 )
 g <- g + guides(fill = "none") # remove the fill legend
+
 # we overimpose another geometrical object
 g <- g + geom_jitter(size = 1.2, position = position_jitter(height = 0, width = 0.4))
+g <- g + facet_wrap(~ Category, scales = "fixed")
 
 # We can control the coordinates
 # g <- g + coord_cartesian(ylim=c(1,nlevels(ranked_data$alg)))
