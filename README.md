@@ -1,1 +1,1 @@
-Only testing of actions is left
+This Repository handles all work regarding the webpage, This includes performing ISA, generating and updating pages, rendering, publishing and deploying the webpage.
