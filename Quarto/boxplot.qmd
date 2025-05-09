@@ -12,6 +12,7 @@ format:
     toc: false
 ---
 
+
 ## Data Inspection
 ```{r}
 suppressPackageStartupMessages(library(dplyr)) # suppresses the startup message to avoid it being shown on the page.
