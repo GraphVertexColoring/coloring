@@ -104,6 +104,9 @@ def makefile(filepath, path):
         file.write(js_content)
     print ("data.js created")
 
+    os.remove(f"{filepath}/data.csv")
+
+
 if __name__== "__main__":
     parser = argparse.ArgumentParser(description="generates inputfile for plot")
     parser.add_argument("--input", required=True, help="Path to the input directory, containing results from ISA")
