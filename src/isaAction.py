@@ -60,7 +60,7 @@ def read_config():
 
     create_subdirs(dir_name, author)
 
-    with open(f'../analysis/{dir_name}/options.json', mode = 'w') as json_file:
+    with open(f'../temp/{dir_name}/options.json', mode = 'w') as json_file:
         json.dump(config, json_file, indent=4)
 
 
