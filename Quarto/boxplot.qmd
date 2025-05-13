@@ -1,5 +1,5 @@
 ---
-title: "BoxPlot Analysis"
+title: "Rank-Based Analysis"
 date:  April 19 2025
 author: "Frederik Dam"
 execute: 
