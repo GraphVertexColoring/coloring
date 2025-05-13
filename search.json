@@ -90,6 +90,20 @@
     ]
   },
   {
+    "objectID": "Analysis/Example/Example.html",
+    "href": "Analysis/Example/Example.html",
+    "title": "Example",
+    "section": "",
+    "text": "Color plot 1 by:\n    \n    \n  \n  \n  \n    Color plot 2 by:"
+  },
+  {
+    "objectID": "Analysis/Example/Example.html#features-explained",
+    "href": "Analysis/Example/Example.html#features-explained",
+    "title": "Example",
+    "section": "Features explained:",
+    "text": "Features explained:\nIsBetaEasy: Indicates whether an instance is denoted as easy based on the used Beta Threshold (default = 0.55) which denotes a percentage of instances that must have performance better than the performance threshold (0.0125 for the example), for an instance to be denoted as easy.\nNumGoodAlgos: The number of algorithms, used in the analysis, that attains good performance on the given instance.\nnum_vertices: The number of vertices that the instance contains.\nnum_edges: The number of edges that the instance contains.\nlargest_dist: The largest distance found among the shortest path between any two vertices of the graph.\nratio_of_edges: The ratio between the number of edges in a graph, and the maximum number of possible edges.\naverage_dist: This denotes the distance between any pair of vertices using their shortest path.\nmean_degree: The mean value of the number of connections a vertice has to other vertices in the graph.\nstd_deviation_degree: The standard deviation of the vertex degree.\nclustering_coef: The ratio of closed triplets to the number total number of triplets in a graph. calculated as Tripclosed / TripTotal.\nenergy: The mean value of all eigenvalues of the adjacency matrix.\nstd_devi_eig_adj: The standard deviation of the set of eigenvalues of the adjacency matrix.\nconnectivity: The Algebraic connectivity, which is denoted as the second smallest eigenvalue of the Laplacian matrix.\nsmall_nonzero_eig_lap:The smallest nonzero eigenvalue of the Laplacian matrix.\nsec_small_nonzero_eig_lap: The second smallest nonzero eigenvalue of the Laplacian matrix.\nlarge_eig_lap: The largest eigenvalue of the Laplacian matrix.\nsec_large_eig_lap: The second largest eigenvalue of the Laplacian matrix.\nsmall_eig_adj:The smallest eigenvalue of the adjacency matrix.\nsec_small_eig_adj: The second smallest eigenvalue of the adjacency matrix.\nlarge_eig_adj: The largest eigenvalue of the adjacency matrix.\nsec_large_eig_adj: The second largest eigenvalue of the adjacency matrix.\ngap_eig_adj:The gap between the largest and second largest eigenvalue of the adjacency matrix.\ngap_eig_lap:The gap between the largest and second largest eigenvalue of the Laplacian matrix.\n_perf: The performance metric for an algorithm on the instance, calculated as (Algperf - Bestperf) / Bestperf.\n_bin: The binary coloring, based on whether or not an algorithms performance metric is below the performance threshold or not.\nbest: The best is an “algorithm” only in name for the sake of the ISA, as the performance metric fro the analysis, is based on comparing to the best known solution, here best denotes those best known solutions."
+  },
+  {
     "objectID": "about.html",
     "href": "about.html",
     "title": "About",
@@ -130,16 +144,16 @@
     ]
   },
   {
-    "objectID": "Analysis/Example/Example.html",
-    "href": "Analysis/Example/Example.html",
-    "title": "Example",
+    "objectID": "Analysis/Test/page.html",
+    "href": "Analysis/Test/page.html",
+    "title": "Test",
     "section": "",
     "text": "Color plot 1 by:\n    \n    \n  \n  \n  \n    Color plot 2 by:"
   },
   {
-    "objectID": "Analysis/Example/Example.html#features-explained",
-    "href": "Analysis/Example/Example.html#features-explained",
-    "title": "Example",
+    "objectID": "Analysis/Test/page.html#features-explained",
+    "href": "Analysis/Test/page.html#features-explained",
+    "title": "Test",
     "section": "Features explained:",
     "text": "Features explained:\nIsBetaEasy: Indicates whether an instance is denoted as easy based on the used Beta Threshold (default = 0.55) which denotes a percentage of instances that must have performance better than the performance threshold (0.0125 for the example), for an instance to be denoted as easy.\nNumGoodAlgos: The number of algorithms, used in the analysis, that attains good performance on the given instance.\nnum_vertices: The number of vertices that the instance contains.\nnum_edges: The number of edges that the instance contains.\nlargest_dist: The largest distance found among the shortest path between any two vertices of the graph.\nratio_of_edges: The ratio between the number of edges in a graph, and the maximum number of possible edges.\naverage_dist: This denotes the distance between any pair of vertices using their shortest path.\nmean_degree: The mean value of the number of connections a vertice has to other vertices in the graph.\nstd_deviation_degree: The standard deviation of the vertex degree.\nclustering_coef: The ratio of closed triplets to the number total number of triplets in a graph. calculated as Tripclosed / TripTotal.\nenergy: The mean value of all eigenvalues of the adjacency matrix.\nstd_devi_eig_adj: The standard deviation of the set of eigenvalues of the adjacency matrix.\nconnectivity: The Algebraic connectivity, which is denoted as the second smallest eigenvalue of the Laplacian matrix.\nsmall_nonzero_eig_lap:The smallest nonzero eigenvalue of the Laplacian matrix.\nsec_small_nonzero_eig_lap: The second smallest nonzero eigenvalue of the Laplacian matrix.\nlarge_eig_lap: The largest eigenvalue of the Laplacian matrix.\nsec_large_eig_lap: The second largest eigenvalue of the Laplacian matrix.\nsmall_eig_adj:The smallest eigenvalue of the adjacency matrix.\nsec_small_eig_adj: The second smallest eigenvalue of the adjacency matrix.\nlarge_eig_adj: The largest eigenvalue of the adjacency matrix.\nsec_large_eig_adj: The second largest eigenvalue of the adjacency matrix.\ngap_eig_adj:The gap between the largest and second largest eigenvalue of the adjacency matrix.\ngap_eig_lap:The gap between the largest and second largest eigenvalue of the Laplacian matrix.\n_perf: The performance metric for an algorithm on the instance, calculated as (Algperf - Bestperf) / Bestperf.\n_bin: The binary coloring, based on whether or not an algorithms performance metric is below the performance threshold or not.\nbest: The best is an “algorithm” only in name for the sake of the ISA, as the performance metric fro the analysis, is based on comparing to the best known solution, here best denotes those best known solutions."
   },
@@ -148,7 +162,7 @@
     "href": "analysis.html",
     "title": "Analysis listing",
     "section": "",
-    "text": "This page lists all the ISA’s that are currently being stored on the page.\n\n\n\n\n\n\n   \n    \n    \n      Order By\n      Default\n      \n        Date - Oldest\n      \n      \n        Date - Newest\n      \n      \n        Title\n      \n      \n        Author\n      \n    \n  \n    \n      \n      \n    \n\n\n\n\n\n\nDate\n\n\n\nTitle\n\n\n\nAuthor\n\n\n\n\n\n\n\n\nMar 25, 2025\n\n\nExample\n\n\nFrederik Dam\n\n\n\n\n\n\nNo matching items",
+    "text": "This page lists all the ISA’s that are currently being stored on the page.\n\n\n\n\n\n\n   \n    \n    \n      Order By\n      Default\n      \n        Date - Oldest\n      \n      \n        Date - Newest\n      \n      \n        Title\n      \n      \n        Author\n      \n    \n  \n    \n      \n      \n    \n\n\n\n\n\n\nDate\n\n\n\nTitle\n\n\n\nAuthor\n\n\n\n\n\n\n\n\nMar 25, 2025\n\n\nExample\n\n\nFrederik Dam\n\n\n\n\n\n\nMay 13, 2025\n\n\nTest\n\n\nFrederik M. Dam\n\n\n\n\n\n\nNo matching items",
     "crumbs": [
       "Analysis listing"
     ]
