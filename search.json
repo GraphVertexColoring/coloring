@@ -4,7 +4,7 @@
     "href": "boxplot.html#boxplot",
     "title": "BoxPlot Analysis",
     "section": "Boxplot",
-    "text": "Boxplot\nEach currently used algorithm has had 2 runs, Algorithms with no valid solutions are ignored and removed completely from the ranking.",
+    "text": "Boxplot\nEach currently used algorithm has had 2 runs, Algorithms with no valid solutions are ignored and removed completely from the ranking. Any missing solutions, are not counted against an algorithm due to the shorter running time.",
     "crumbs": [
       "BoxPlot Analysis"
     ]
