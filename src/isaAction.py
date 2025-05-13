@@ -1,5 +1,4 @@
 import os
-import argparse
 import yaml # used for the config.yaml file that will need to be updated to trigger an ISA.
 import json # for creating the options.json file 
 import metadataBuilder as builder
