@@ -2,6 +2,7 @@ algos: # list of the algorithms to be used for ISA
   - DSATUR_chiarandini
   - RLF_chiarandini
   - Greedy_chiarandini
+
   
 
 # A name to be used for the title of the subpage

@@ -1,7 +1,0 @@
----
-title: "Analysis 2"
-date:  Feb 25 2025
-author: "DenatYeti"
----
-
-This is a page should contain an analysis.
