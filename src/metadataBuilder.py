@@ -55,40 +55,7 @@ def gather_algo_results(algos, path_to_csv):
 
     return algo_dict
 
-#this needs a big update as it doesnt do what i want it to do.
-#also needs to add some feature selection
-def z_score_standardize(feature_dict):
-    standardized_dict = {}
-
-    feature_names = list(next(iter(feature_dict.values())).keys())
-    #computing the mean and standard deviation for each feature 
-
-    x = {
-        feature: {
-            "mean": np.mean([float(feature_dict[instance][feature]) for instance in feature_dict]),
-            "std": np.std([float(feature_dict[instance][feature]) for instance in feature_dict])
-        }
-        for feature in feature_names
-    }
-
-    # applying the Z-score normalization
-    for instance, features in feature_dict.items():
-        #adding the instance to the new dict
-        standardized_dict[instance] = {}
-        for feature, value in features.items():
-            if feature in x:
-                mean = x[feature]['mean']
-                std = x[feature]['std']
-                if std > 0: # Ensures no division by zero
-                    standardized_dict[instance][feature] = (float(value)- mean) / std
-                else:
-                    standardized_dict[instance][feature] = 0
-            else:
-                standardized_dict[instance][feature] = value
-
-    return standardized_dict
-
-def make_file(algos, filepath, standardize = False): 
+def make_file(algos, filepath): 
     # collect the dictionaries needed for file creation
     feature_dict = gather_features('../Resources/InstanceFeatures.csv') # A static file that should be updated when a new instance is added.
     algo_dict = gather_algo_results(algos, "../Resources/algoPerf.csv")
@@ -100,9 +67,6 @@ def make_file(algos, filepath, standardize = False):
     header = [feature for feature in feature_names]
     algorithms = ['algo_' + s for s in algo_best] 
 
-    if standardize:
-        feature_dict = z_score_standardize(feature_dict)
-    
     with open(os.path.join(filepath, "metadata.csv") , mode="w", newline="") as file:
         writer = csv.writer(file)
 
@@ -139,9 +103,8 @@ def make_file(algos, filepath, standardize = False):
 def test():
     timestamp = time.time()
     algos = ['DSATUR'] 
-    standardize = False
     
-    make_file(algos, "../analysis/test/metadata.csv", standardize)
+    make_file(algos, "../analysis/test/metadata.csv")
 
     end = time.time()
     print(end - timestamp)
