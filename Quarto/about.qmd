@@ -3,14 +3,14 @@ title: "About"
 
 about:
     template: trestles
-    image: Images/Shortestclosed.JPG
+    image: Images/GraphVertexColoring.png
     links:
         - icon: github
           text: Github
+          href: https://github.com/GraphVertexColoring
+        - icon: github
+          text: Beta
           href: https://github.com/DenatYeti/GVC-validator/tree/main
-        - icon: twitter
-          text: twitter
-          href: https://google.com
 ---
 ## Education
 

@@ -1,12 +1,12 @@
 algos: # list of the algorithms to be used for ISA
-  - DSATUR
-  - RLF
-  - Greedy
+  - DSATUR_chiarandini
+  - RLF_chiarandini
+  - Greedy_chiarandini
 
 # A name to be used for the title of the subpage
-dir: test3
+dir: Test
 # Name to be displayed as the author
-author: Fake
+author: Frederik M. Dam
 
 ##
 # All below metrics are used to perform Instance Space Analysis
