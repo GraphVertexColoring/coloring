@@ -3,6 +3,9 @@ name: Quarto Publish  # Defining the name.
 on:
   workflow_dispatch: # Allows for manual triggering of action without a new push being made. 
   workflow_call:
+      secrets:
+      token:
+        required: true
 
 jobs: # List of jobs
   build-deploy:

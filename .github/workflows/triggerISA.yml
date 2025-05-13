@@ -47,4 +47,4 @@ jobs:
     needs: triggerISA  # run after triggerISA finishes
     uses: GraphVertexColoring/coloring/.github/workflows/publish.yml@master
     secrets:
-      token: ${{ secrets.ORG_PAT }}
+      token: ${{secrets.ORG_PAT}}
