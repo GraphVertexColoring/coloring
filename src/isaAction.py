@@ -1,9 +1,8 @@
 import os
-import yaml # used for the config.yaml file that will need to be updated to trigger an ISA.
 import json # for creating the options.json file 
 import metadataBuilder as builder
 import pageData as coordinate
-from ruamel.yaml import YAML
+from ruamel.yaml import YAML # replaced pyyaml to guarantee that the .qmd files are read correctly.
 from datetime import datetime
 
 def create_subdirs(dir_name, author):
@@ -45,7 +44,8 @@ def create_subdirs(dir_name, author):
 
 def read_config():
     with open('../config.yaml', 'r') as file:
-        config = yaml.safe_load(file) # reads the file 
+        yaml = YAML()
+        config = yaml.load(file) # reads the file 
 
     algorithms = config.get('algos', []) # saving algos parsing to the databuilder
 
