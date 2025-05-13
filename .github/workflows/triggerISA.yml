@@ -43,13 +43,3 @@ jobs:
         git commit -m "Generated new Instance Space Analysis" || exit 0
         git push
     
-    # Small delay to allow for the commit to be fully completed before the publish job is run
-    - name: Wait for commit push
-      run: sleep 10
-
-  # Reuses the Quarto Publish workflow such that automatic publishing is performed when a new ISA is made 
-  publish:
-    needs: triggerISA  # run after triggerISA finishes
-    uses: GraphVertexColoring/coloring/.github/workflows/publish.yml@master
-    secrets:
-      token: ${{secrets.ORG_PAT}}
