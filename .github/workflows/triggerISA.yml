@@ -26,6 +26,7 @@ jobs:
       run: |
         pip install -r requirements.txt # Choses what to get based on the requirements.txt.
         pip install pyispace
+      working-directory: src/
 
     # Execute the python script which contains the bulk of what the action does.
     - name: Execute Scripts #currently static but could be made more generic based on changes in the config
