@@ -3,10 +3,10 @@ import shutil
 import time
 
 # Directories to clean up
-TARGET_DIRS = ["analysis", "docs"]
-RETENTION_DAYS = 100  # Number of days before deletion (2 weeks)
+TARGET_DIRS = ["Quarto/Analysis"]
+RETENTION_DAYS = 14  # Number of days before deletion (2 weeks)
 CURRENT_TIME = time.time()
-EXCLUSION_DIRS = ["_layouts", "assets", "example"]
+EXCLUSION_DIRS = ["Example"]
 
 def delete_old_subdirectories(directory, retention_days):
     if not os.path.exists(directory) or not os.path.isdir(directory):

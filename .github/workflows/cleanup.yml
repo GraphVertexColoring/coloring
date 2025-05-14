@@ -2,8 +2,9 @@ name: Cleanup Old Subdirectories
 
 # Sets up a trigger condition.
 on:
-  schedule: # Automatic trigger during a specified time and day.
-    - cron: '0 0 * * 0'  # Runs every Sunday at midnight UTC.
+  #schedule: # Automatic trigger during a specified time and day.
+   # - cron: '0 0 * * 0'  # Runs every Sunday at midnight UTC.
+  workflow_dispatch: # Allows for manual triggering rather than automatic.
 
 # Assigns the jobs that are to be triggered.
 jobs:
