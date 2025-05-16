@@ -12,10 +12,10 @@ about:
           text: Beta
           href: https://github.com/DenatYeti/GVC-validator/tree/main
 ---
-## Education
+fjern educaion and instad add a link to linked in or my github, 
 
-University of Southern Denmark, Odense | Odense, Fyn |
-Masters in Computer Science | Sept 2020 - June 2025
+## Developers
+This page was developed primarily by [Frederik M. Dam] (https://www.linkedin.com/in/frederik-dam-45aba6321/)
 
 ## Motivation
 

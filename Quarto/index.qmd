@@ -18,6 +18,3 @@ For an explanation on how to use the different aspects see [Getting Started](How
 ## Beta
 An Initial beta version of this site can be found at <https://denatyeti.github.io/GVC-validator/>. This initial version contains only some of the functionalities and is no longer maintained.
 
-## Inspiration:
-This structure of this site, has taken great inspiration from the COCO page, which can be found at <https://coco-platform.org/>. 
-
