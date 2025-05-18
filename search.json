@@ -30,16 +30,6 @@
     ]
   },
   {
-    "objectID": "index.html#inspiration",
-    "href": "index.html#inspiration",
-    "title": "GVC: Graph-Vertex Coloring",
-    "section": "Inspiration:",
-    "text": "Inspiration:\nThis structure of this site, has taken great inspiration from the COCO page, which can be found at https://coco-platform.org/.",
-    "crumbs": [
-      "Home"
-    ]
-  },
-  {
     "objectID": "HowTo.html",
     "href": "HowTo.html",
     "title": "Getting Started",
@@ -108,17 +98,17 @@
     "href": "about.html",
     "title": "About",
     "section": "",
-    "text": "University of Southern Denmark, Odense | Odense, Fyn | Masters in Computer Science | Sept 2020 - June 2025",
+    "text": "fjern educaion and instad add a link to linked in or my github,",
     "crumbs": [
       "About"
     ]
   },
   {
-    "objectID": "about.html#education",
-    "href": "about.html#education",
+    "objectID": "about.html#developers",
+    "href": "about.html#developers",
     "title": "About",
-    "section": "",
-    "text": "University of Southern Denmark, Odense | Odense, Fyn | Masters in Computer Science | Sept 2020 - June 2025",
+    "section": "Developers",
+    "text": "Developers\nThis page was developed primarily by [Frederik M. Dam] (https://www.linkedin.com/in/frederik-dam-45aba6321/)",
     "crumbs": [
       "About"
     ]
