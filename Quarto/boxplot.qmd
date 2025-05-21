@@ -111,7 +111,7 @@ g <- ggplot(ranked_data, aes(x = reorder(algorithm, -rank, median), y = rank))
 
 # we define the geometrical object
 g <- g + geom_boxplot(aes(fill = algorithm),
-    width = 0.8, stat = "boxplot",
+    width = 1, stat = "boxplot",
     position = position_dodge(width = 0),
     colour = I("#3366FF"), outlier.colour = I("#3366FF")
 )
