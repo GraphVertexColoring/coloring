@@ -53,7 +53,7 @@ datatable(data,
 ## Boxplot
 Each currently used algorithm has had 2 runs, Algorithms with no valid solutions are ignored and removed completely from the ranking.
 Any missing solutions, are not counted against an algorithm due to the shorter running time. 
-```{r}
+```{r, fig.width=12,fig.height=8}
 # Loading the best.csv
 best_data <- read.csv("../Resources/best.csv")
 
