@@ -1,3 +1,8 @@
+# metadataBuilder.py
+# Copyright (c) 2025 Frederik M. Dam
+# This file is licensed under the MIT License.
+# See the LICENSE file in the project root for full license text.
+
 # This program is meant to take .col files and extract feature data from them.
 #   This involves reading data from the file, generating laplacian and adjacency graphs, and performing the necessary calculations.
 import os
@@ -7,6 +12,9 @@ import csv
 import time 
 import argparse
 
+##
+# Reads the specified file and extracts the feature columns.
+##
 def gather_features(path):
     print("Calculating features")
     feature_dict = {}
@@ -21,9 +29,10 @@ def gather_features(path):
     return feature_dict 
 
 ##
-# This should open the best.csv file and treat it as the solutions from an algorithm
+# This opens the best.csv file and treat it as the solutions from an algorithm
 #   This method assumes that all solutions passed to it are valid, this is done since i want to use the github action to check the validity of solutions instead.
 #       Could consider having the action delete non valid solutions.
+# The method also reads from the algoritm performance file and extracts information reguarding the valid algorithms.
 ##
 def gather_algo_results(algos, path_to_csv): 
     print("Processing Algorithm results...")
@@ -55,6 +64,9 @@ def gather_algo_results(algos, path_to_csv):
 
     return algo_dict
 
+##
+# Given the list of algorithms and a target directory, this method orcestrates the primary function of this script and collects all information in a file.
+##
 def make_file(algos, filepath): 
     # collect the dictionaries needed for file creation
     feature_dict = gather_features('../Resources/InstanceFeatures.csv') # A static file that should be updated when a new instance is added.
@@ -98,8 +110,6 @@ def make_file(algos, filepath):
     print(f"file created in path: {filepath}")
     return True
     
-# Have to update such that it takes a path and some algorithms as input.
-    # figure out how this is done.
 def test():
     timestamp = time.time()
     algos = ['DSATUR'] 

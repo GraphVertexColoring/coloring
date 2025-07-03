@@ -1,3 +1,8 @@
+# isaAction.py
+# Copyright (c) 2025 Frederik M. Dam
+# This file is licensed under the MIT License.
+# See the LICENSE file in the project root for full license text.
+
 import os
 import json # for creating the options.json file 
 import metadataBuilder as builder
@@ -5,6 +10,10 @@ import pageData as coordinate
 from ruamel.yaml import YAML # replaced pyyaml to guarantee that the .qmd files are read correctly.
 from datetime import datetime
 
+
+##
+# This method takes a target directory and an author, before copying the basic example quarto file while updating the fields of it.
+##
 def create_subdirs(dir_name, author):
     os.makedirs(f"../Quarto/Analysis/{dir_name}")
     print("Page directory created")
@@ -42,6 +51,10 @@ def create_subdirs(dir_name, author):
     print(f"page.qmd copied to: ../Quarto/Analysis/{dir_name}")
     return 0
 
+
+## 
+# Handles the reading of the config file as to assertain the parameters for the ISA and the some fields of the created subpage.
+##
 def read_config():
     with open('../config.yaml', 'r') as file:
         yaml = YAML()
